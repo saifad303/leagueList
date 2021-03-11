@@ -1,28 +1,20 @@
-import './App.css';
-import CounterHooks from './CounterHooks';
-import React, { createContext, useState } from 'react';
-
-export const ThemeContext = createContext();
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import LeagueList from './components/leagueList/LeagueList'
+import TeamDetail from './components/leagueDetail/TeamDetail'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css.map'
 
 function App() {
-  const [theme, setTheme] = useState('red');
-
-  let changeTheme = () =>{
-    setTheme((prevTheme) =>{
-      return prevTheme === 'red' ? 'blue' : 'red';
-    });
-  }
-
 
   return (
-    <ThemeContext.Provider value={{ backgroundColor: theme }}>
-    <div className="App">
-      <h1>Project One</h1>
-      <hr/>
-      <button onClick={changeTheme}>Toogle theme</button>
-      <CounterHooks title = {'Counter project'}/>
-    </div>
-    </ThemeContext.Provider>
+        <>
+          <Router>
+            <Switch>
+              <Route exact path="/" component={LeagueList} />
+              <Route path="/detail/:id" component={TeamDetail}/>
+            </Switch>
+          </Router>
+        </>
   );
 }
 

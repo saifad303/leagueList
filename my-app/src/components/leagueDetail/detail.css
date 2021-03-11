@@ -1,0 +1,42 @@
+.team-intro{
+    width: 40%;
+    height: 304px;
+    display: inline-block;
+}
+.team-img{
+    width: 54%;
+    float: right;
+}
+.clr{
+    clear: both;
+}
+
+div fieldset ul li{
+    float: left;
+    margin-left: 18px;
+    display: inline-block;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+div fieldset ul li i{
+    width: 56px;
+    height: 56px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 100%;
+    color: white;
+    font-size: 25px;
+}
+.fab{
+    line-height: 55px;
+}
+div fieldset ul li .fa-twitter{
+    background-color: #55acee;
+}
+div fieldset ul li .fa-facebook-f{
+    background-color: #3b5998;
+}
+div fieldset ul li .fa-youtube{
+    background-color: red;
+}
